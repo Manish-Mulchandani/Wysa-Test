@@ -12,73 +12,73 @@
   - **Response:**
     ```json
     {
-      "userId": "generated_user_id",
+      "userId": "generated_user_id by uuid",
       "nickname": "user_nickname"
     }
     ```
 
-### 2. Sleepy Issues Duration:
+### 2. Duration of Sleep Issues:
 
 - **POST `/api/sleep-assessment/duration`**
-  - **Type Something Like:**
+  - **Request:**
     ```json
     {
       "userId": "user_id",
       "duration": "less_than_2_weeks"
     }
     ```
-  - **See What Happens:**
+  - **Response:**
     ```json
     {
       "message": "Recorded duration. Hope it's okay!"
     }
     ```
 
-### 3. Sleepy Time Entry:
+### 3. Sleep Time:
 
 - **POST `/api/sleep-assessment/sleep-time`**
-  - **Write It Down:**
+  - **Request:**
     ```json
     {
       "userId": "user_id",
       "sleepTime": "22:00"
     }
     ```
-  - **Get This in Return:**
+  - **Response:**
     ```json
     {
       "message": "Noted your sleep time. Good night!"
     }
     ```
 
-### 4. Wake Up Time Adventure:
+### 4. Wake Up Time:
 
 - **POST `/api/sleep-assessment/wake-up-time`**
-  - **Try Something Like:**
+  - **Request:**
     ```json
     {
       "userId": "user_id",
       "wakeUpTime": "07:00"
     }
     ```
-  - **What You Might Get:**
+  - **Response:**
     ```json
     {
       "message": "Wake up time recorded. Morning person vibes!"
     }
     ```
 
-### 5. Daily Sleep Duration Fun:
+### 5. Daily Sleep Duration:
 
 - **POST `/api/sleep-assessment/daily-sleep-duration`**
-  - **Write Something Down:**
+  - **Request:**
     ```json
     {
       "userId": "user_id",
       "hoursOfSleep": 7
     }
     ```
-  - **And Maybe Get:**
+  - **Response:**
     ```json
     {
       "message": "Wow, your daily sleep duration is now a fact!"
