@@ -85,22 +85,15 @@
     }
     ```
 
-## Database Things (SQL):
-
-### Users Table:
-
-- **Columns:**
-  - `assessmentId` (Main Key thing)
-  - `nickname` (Just a word)
+## Database Schema (SQL):
 
 ### SleepAssessment Table:
 
 - **Columns:**
-  - `assessmentId` (Main Key magic)
-  - `assessmentId` (Something linking to Users)
-  - `duration` (Words like "less_than_2_weeks", "2_to_8_weeks", "more_than_8_weeks")
-  - `sleepTime` (The time when Zzz happens)
-  - `wakeUpTime` (Morning time)
-  - `hoursOfSleep` (A number, like 7)
+  - `assessmentId` (Primary Key)
+  - `nickname` (String)
+  - `duration` (String) - options: "less_than_2_weeks", "2_to_8_weeks", "more_than_8_weeks"
+  - `sleepTime` (Time)
+  - `wakeUpTime` (Time)
+  - `hoursOfSleep` (Decimal)
 
-This is like the special code my app uses to keep track of your sleep adventures. 🌙✨
