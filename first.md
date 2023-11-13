@@ -1,22 +1,17 @@
-# Sleep Assessment App API and Database Design
+# Sleepy App API & DB Magic
 
-## REST API Interaction Flows
+## REST API Stuff
 
-### 1. Create User Profile:
+### 1. User Signup:
 
-- **Request:**
-  - **Method:** `POST`
-  - **Endpoint:** `/api/users`
+- **POST `/api/users`**
   - **Body:**
     ```json
     {
       "nickname": "user_nickname"
     }
     ```
-
-- **Response:**
-  - **Status:** `201 Created`
-  - **Body:**
+  - **Response:**
     ```json
     {
       "userId": "generated_user_id",
@@ -24,11 +19,9 @@
     }
     ```
 
-### 2. Duration of Sleep Issues:
+### 2. Sleep Issues Duration:
 
-- **Request:**
-  - **Method:** `POST`
-  - **Endpoint:** `/api/sleep-assessment/duration`
+- **POST `/api/sleep-assessment/duration`**
   - **Body:**
     ```json
     {
@@ -36,21 +29,16 @@
       "duration": "less_than_2_weeks"
     }
     ```
-
-- **Response:**
-  - **Status:** `200 OK`
-  - **Body:**
+  - **Response:**
     ```json
     {
-      "message": "Duration recorded successfully"
+      "message": "Duration recorded. Sweet!"
     }
     ```
 
-### 3. Sleep Time:
+### 3. Sleep Time Entry:
 
-- **Request:**
-  - **Method:** `POST`
-  - **Endpoint:** `/api/sleep-assessment/sleep-time`
+- **POST `/api/sleep-assessment/sleep-time`**
   - **Body:**
     ```json
     {
@@ -58,21 +46,16 @@
       "sleepTime": "22:00"
     }
     ```
-
-- **Response:**
-  - **Status:** `200 OK`
-  - **Body:**
+  - **Response:**
     ```json
     {
-      "message": "Sleep time recorded successfully"
+      "message": "Sleep time noted. Zzz..."
     }
     ```
 
-### 4. Wake Up Time:
+### 4. Wake Up Time Fun:
 
-- **Request:**
-  - **Method:** `POST`
-  - **Endpoint:** `/api/sleep-assessment/wake-up-time`
+- **POST `/api/sleep-assessment/wake-up-time`**
   - **Body:**
     ```json
     {
@@ -80,21 +63,16 @@
       "wakeUpTime": "07:00"
     }
     ```
-
-- **Response:**
-  - **Status:** `200 OK`
-  - **Body:**
+  - **Response:**
     ```json
     {
-      "message": "Wake up time recorded successfully"
+      "message": "Wake up time recorded. Rise and shine!"
     }
     ```
 
-### 5. Daily Sleep Duration:
+### 5. Daily Sleep Duration Gossip:
 
-- **Request:**
-  - **Method:** `POST`
-  - **Endpoint:** `/api/sleep-assessment/daily-sleep-duration`
+- **POST `/api/sleep-assessment/daily-sleep-duration`**
   - **Body:**
     ```json
     {
@@ -102,17 +80,14 @@
       "hoursOfSleep": 7
     }
     ```
-
-- **Response:**
-  - **Status:** `200 OK`
-  - **Body:**
+  - **Response:**
     ```json
     {
-      "message": "Daily sleep duration recorded successfully"
+      "message": "Nice! Daily sleep duration logged."
     }
     ```
 
-## Database Schema (SQL):
+## Database Doodle (SQL):
 
 ### Users Table:
 
@@ -130,4 +105,4 @@
   - `wakeUpTime` (Time)
   - `hoursOfSleep` (Decimal)
 
-This schema facilitates the structured storage of user profiles and sleep assessment data. Data types can be adjusted, and additional tables may be introduced based on specific application requirements.
+This is like the behind-the-scenes magic happening when you spill your sleep secrets to our app. 😴✨
