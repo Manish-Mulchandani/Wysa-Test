@@ -1,17 +1,15 @@
-# Welcome to My Sleepy App Database
+## REST API Interaction Flows
 
-## API Things
-
-### 1. Make an Account:
+### 1. Create User Profile:
 
 - **POST `/api/users`**
-  - **Write This:**
+  - **Request:**
     ```json
     {
       "nickname": "user_nickname"
     }
     ```
-  - **Get This Back:**
+  - **Response:**
     ```json
     {
       "userId": "generated_user_id",
