@@ -1,17 +1,17 @@
-# Sleepy App API & DB Magic
+# Welcome to My Sleepy App Database
 
-## REST API Stuff
+## API Things
 
-### 1. User Signup:
+### 1. Make an Account:
 
 - **POST `/api/users`**
-  - **Body:**
+  - **Write This:**
     ```json
     {
       "nickname": "user_nickname"
     }
     ```
-  - **Response:**
+  - **Get This Back:**
     ```json
     {
       "userId": "generated_user_id",
@@ -19,90 +19,90 @@
     }
     ```
 
-### 2. Sleep Issues Duration:
+### 2. Sleepy Issues Duration:
 
 - **POST `/api/sleep-assessment/duration`**
-  - **Body:**
+  - **Type Something Like:**
     ```json
     {
       "userId": "user_id",
       "duration": "less_than_2_weeks"
     }
     ```
-  - **Response:**
+  - **See What Happens:**
     ```json
     {
-      "message": "Duration recorded. Sweet!"
+      "message": "Recorded duration. Hope it's okay!"
     }
     ```
 
-### 3. Sleep Time Entry:
+### 3. Sleepy Time Entry:
 
 - **POST `/api/sleep-assessment/sleep-time`**
-  - **Body:**
+  - **Write It Down:**
     ```json
     {
       "userId": "user_id",
       "sleepTime": "22:00"
     }
     ```
-  - **Response:**
+  - **Get This in Return:**
     ```json
     {
-      "message": "Sleep time noted. Zzz..."
+      "message": "Noted your sleep time. Good night!"
     }
     ```
 
-### 4. Wake Up Time Fun:
+### 4. Wake Up Time Adventure:
 
 - **POST `/api/sleep-assessment/wake-up-time`**
-  - **Body:**
+  - **Try Something Like:**
     ```json
     {
       "userId": "user_id",
       "wakeUpTime": "07:00"
     }
     ```
-  - **Response:**
+  - **What You Might Get:**
     ```json
     {
-      "message": "Wake up time recorded. Rise and shine!"
+      "message": "Wake up time recorded. Morning person vibes!"
     }
     ```
 
-### 5. Daily Sleep Duration Gossip:
+### 5. Daily Sleep Duration Fun:
 
 - **POST `/api/sleep-assessment/daily-sleep-duration`**
-  - **Body:**
+  - **Write Something Down:**
     ```json
     {
       "userId": "user_id",
       "hoursOfSleep": 7
     }
     ```
-  - **Response:**
+  - **And Maybe Get:**
     ```json
     {
-      "message": "Nice! Daily sleep duration logged."
+      "message": "Wow, your daily sleep duration is now a fact!"
     }
     ```
 
-## Database Doodle (SQL):
+## Database Things (SQL):
 
 ### Users Table:
 
 - **Columns:**
-  - `userId` (Primary Key)
-  - `nickname` (String)
+  - `userId` (Main Key thing)
+  - `nickname` (Just a word)
 
 ### SleepAssessment Table:
 
 - **Columns:**
-  - `assessmentId` (Primary Key)
-  - `userId` (Foreign Key referencing Users table)
-  - `duration` (String) - options: "less_than_2_weeks", "2_to_8_weeks", "more_than_8_weeks"
-  - `sleepTime` (Time)
-  - `wakeUpTime` (Time)
-  - `hoursOfSleep` (Decimal)
+  - `assessmentId` (Main Key magic)
+  - `userId` (Something linking to Users)
+  - `duration` (Words like "less_than_2_weeks", "2_to_8_weeks", "more_than_8_weeks")
+  - `sleepTime` (The time when Zzz happens)
+  - `wakeUpTime` (Morning time)
+  - `hoursOfSleep` (A number, like 7)
 
-This is like the behind-the-scenes magic happening when you spill your sleep secrets to our app. 😴✨
+This is like the special code my app uses to keep track of your sleep adventures. 🌙✨
