@@ -12,7 +12,7 @@
   - **Response:**
     ```json
     {
-      "userId": "generated_user_id by uuid",
+      "assessmentId": "generated_assessment_id by uuid",
       "nickname": "user_nickname"
     }
     ```
@@ -23,14 +23,14 @@
   - **Request:**
     ```json
     {
-      "userId": "user_id",
+      "assessmentId": "assessment_id",
       "duration": "less_than_2_weeks"
     }
     ```
   - **Response:**
     ```json
     {
-      "message": "Recorded duration. Hope it's okay!"
+      "message": "Recorded duration of sleep issues."
     }
     ```
 
@@ -40,14 +40,14 @@
   - **Request:**
     ```json
     {
-      "userId": "user_id",
+      "assessmentId": "assessment_id",
       "sleepTime": "22:00"
     }
     ```
   - **Response:**
     ```json
     {
-      "message": "Noted your sleep time. Good night!"
+      "message": "Recorded Sleep Time."
     }
     ```
 
@@ -57,14 +57,14 @@
   - **Request:**
     ```json
     {
-      "userId": "user_id",
+      "assessmentId": "assessment_id",
       "wakeUpTime": "07:00"
     }
     ```
   - **Response:**
     ```json
     {
-      "message": "Wake up time recorded. Morning person vibes!"
+      "message": "Recorded wake up time."
     }
     ```
 
@@ -74,14 +74,14 @@
   - **Request:**
     ```json
     {
-      "userId": "user_id",
+      "assessmentId": "assessment_id",
       "hoursOfSleep": 7
     }
     ```
   - **Response:**
     ```json
     {
-      "message": "Wow, your daily sleep duration is now a fact!"
+      "message": "Recorded daily sleep duration."
     }
     ```
 
@@ -90,14 +90,14 @@
 ### Users Table:
 
 - **Columns:**
-  - `userId` (Main Key thing)
+  - `assessmentId` (Main Key thing)
   - `nickname` (Just a word)
 
 ### SleepAssessment Table:
 
 - **Columns:**
   - `assessmentId` (Main Key magic)
-  - `userId` (Something linking to Users)
+  - `assessmentId` (Something linking to Users)
   - `duration` (Words like "less_than_2_weeks", "2_to_8_weeks", "more_than_8_weeks")
   - `sleepTime` (The time when Zzz happens)
   - `wakeUpTime` (Morning time)
